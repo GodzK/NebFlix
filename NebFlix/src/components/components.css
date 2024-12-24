@@ -2,30 +2,72 @@
     position: relative;
     overflow: hidden;
     min-height: 500px;
-    width: 100vw; /* Full width of the viewport */
-    height: 50vh; /* Full height of the viewport */
-}
-
-.head {
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+  }
+  
+  .Welcome-container::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex; /* Center content */
+    background: rgba(0, 0, 0, 0.6); /* Overlay to darken */
+    z-index: 1; /* Ensure it appears above the image */
+  }
+  h1{
+    font-size: 5vh;
+  }
+  h2 {
+    font-size: 3vh;
+    color: white; /* Ensure text is visible over dark overlay */
+    z-index: 2;
+    position: relative;
+  }
+  .h1{
+    font-size: 16vh;
+  }
+  
+  .head {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
     align-items: center;
-}
-
-
-.head img {
+  }
+  
+  .head img {
     position: absolute;
-    object-fit: cover; 
-    width: 100%; 
-    height: 100%; 
-    inset: 0;
-    background-color: rgba(180, 180, 180, 0.8);
-    filter: grayscale(80%);
-    z-index: 0;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1%) brightness(50%); /* Apply grayscale and brightness */
+    z-index: 0; /* Place image below overlay */
+  }
+  
+  .head-li {
+    width: 500px;
+    z-index: 2; /* Ensure content appears above the image and overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    color: white; /* Ensure text is visible */
+    word-wrap: break-word;
+  }
+  
+.btn-sec{
+    width: 40%;
+    gap: 20%;
+    display: flex;
+    padding: 10%;
 }
-.head-li{
-    z-index: 1;
+.content-sec{
+    width: 100%;
+    height: 100%;
+    background-color: black;
 }
